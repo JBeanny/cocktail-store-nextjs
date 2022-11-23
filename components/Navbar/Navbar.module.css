@@ -1,0 +1,39 @@
+.container {
+  width: 100vw;
+  height: 10vh;
+  color: #344d67;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #ef9a53;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.container .logo {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  color: #6eccaf;
+}
+.container :nth-child(2) {
+  width: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container :nth-child(2) .link {
+  font-size: 1.2em;
+  color: #eeeeee;
+}
+
+@media (max-width: 600px) {
+  .container :nth-child(2) {
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .container :nth-child(2) .link {
+    font-size: 1em;
+    color: #eeeeee;
+  }
+}/*# sourceMappingURL=Navbar.module.css.map */

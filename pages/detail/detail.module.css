@@ -1,0 +1,69 @@
+.container {
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 3em;
+}
+.container .imageContainer {
+  width: 50%;
+  height: 100%;
+}
+.container .detail {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 2em;
+}
+.container .detail .name {
+  font-size: 2em;
+  font-weight: bold;
+  color: #344d67;
+}
+.container .detail .category {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.container .detail .instructin {
+  font-size: 1.3em;
+  font-weight: 400px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 3em;
+    margin-left: 0;
+  }
+  .container .imageContainer {
+    width: 100%;
+    height: 50%;
+  }
+  .container .detail {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+  }
+  .container .detail .name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #344d67;
+  }
+  .container .detail .category {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .container .detail .instructin {
+    font-size: 1.3em;
+    font-weight: 400px;
+  }
+}/*# sourceMappingURL=detail.module.css.map */
