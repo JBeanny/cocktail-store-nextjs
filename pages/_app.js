@@ -1,11 +1,26 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout/Layout";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const showHeader = router.pathname === "/404" ? false : true;
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <title>Cocktailer</title>
+        <link rel="icon" href="/logo.webp" />
+        <meta property="og:title" content="Cocktailer" key="title" />
+      </Head>
+      {showHeader ? (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      ) : (
+        <Component {...pageProps} />
+      )}
+    </>
   );
 }
 

@@ -14,7 +14,8 @@ const Card = (props) => {
           width="300"
           height="300"
           alt="Cocktail"
-          style={{ borderRadius: "10px" }}
+          quality={100}
+          style={{ borderTopRightRadius: "10px", borderTopLeftRadius: "10px" }}
         />
       </div>
       <div className={classes.cocktailContent}>

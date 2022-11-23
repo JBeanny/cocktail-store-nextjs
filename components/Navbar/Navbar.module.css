@@ -12,9 +12,8 @@
   z-index: 100;
 }
 .container .logo {
-  font-size: 2.5rem;
-  letter-spacing: 0.1em;
-  color: #6eccaf;
+  width: 80px;
+  height: 80px;
 }
 .container :nth-child(2) {
   width: 20vw;
@@ -27,13 +26,17 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
   .container :nth-child(2) {
-    width: 40vw;
+    width: 50vw;
     display: flex;
     justify-content: space-evenly;
   }
   .container :nth-child(2) .link {
     font-size: 1em;
     color: #eeeeee;
+    padding-right: 0.5em;
   }
 }/*# sourceMappingURL=Navbar.module.css.map */

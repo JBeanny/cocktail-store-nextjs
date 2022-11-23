@@ -10,6 +10,7 @@ const Navbar = () => {
        */}
       <Image
         src="/logo.webp"
+        className={classes.logo}
         width={80}
         height={80}
         alt="Logo"

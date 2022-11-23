@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    allowFutureImage: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -10,6 +11,8 @@ const nextConfig = {
         pathname: "/images/media/drink/**",
       },
     ],
+    //or
+    // domains: ["www.thecocktaildb.com"],
   },
 };
 
