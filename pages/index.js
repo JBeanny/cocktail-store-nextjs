@@ -1,37 +1,21 @@
-import { useState, useEffect } from "react";
 import classes from "../styles/Home.module.css";
 import Card from "../components/Card/Card";
+import { useContext } from "react";
+import CartContext from "../Context/CartContext";
 
-export default function Home() {
-  const [drink, setDrink] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const getCocktail = async () => {
-    await fetch("https://thecocktaildb.com/api/json/v1/1/search.php?f=b")
-      .then((res) => {
-        return res.json();
-      })
-      .then((drinks) => {
-        setDrink(drinks.drinks);
-      });
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    getCocktail();
-  }, []);
-
-  if (loading) return <div className={classes.loading}>Loading...</div>;
+function Home({ drinks }) {
+  const items = useContext(CartContext);
+  items.drinks = drinks;
   return (
     <>
       <h1 className={classes.title}>Grab Cocktail of Your Choice</h1>
       <div className={classes.container}>
-        {drink?.map((drink, index) => {
+        {items.drinks?.map((drink, index) => {
           return (
             <div key={index}>
               <Card
                 id={drink.idDrink}
-                src={`${drink.strDrinkThumb}/preview`}
+                src={`${drink.strDrinkThumb}`}
                 category={drink.strCategory}
                 name={drink.strDrink}
               />
@@ -42,3 +26,21 @@ export default function Home() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  const drinks = await fetch(
+    "https://thecocktaildb.com/api/json/v1/1/search.php?f=b"
+  )
+    .then((res) => res.json())
+    .then((drinks) => {
+      return drinks.drinks;
+    });
+
+  return {
+    props: {
+      drinks,
+    },
+  };
+}
+
+export default Home;

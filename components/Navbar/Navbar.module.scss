@@ -18,9 +18,9 @@
   }
 
   :nth-child(2) {
-    width: 20vw;
     display: flex;
     justify-content: space-evenly;
+    gap: 3em;
 
     .link {
       font-size: 1.2em;

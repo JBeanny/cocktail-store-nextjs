@@ -3,6 +3,8 @@
   color: #383838;
   opacity: 0.8;
   text-decoration: underline;
+  margin-top: 1em;
+  font-size: 2em;
 }
 
 .container {

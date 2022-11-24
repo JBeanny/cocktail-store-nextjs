@@ -2,10 +2,12 @@ import "../styles/globals.css";
 import Layout from "../components/Layout/Layout";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import GlobalState from "../Context/GlobalState";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const showHeader = router.pathname === "/404" ? false : true;
+
   return (
     <>
       <Head>
@@ -13,13 +15,15 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/logo.webp" />
         <meta property="og:title" content="Cocktailer" key="title" />
       </Head>
-      {showHeader ? (
-        <Layout>
+      <GlobalState>
+        {showHeader ? (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        ) : (
           <Component {...pageProps} />
-        </Layout>
-      ) : (
-        <Component {...pageProps} />
-      )}
+        )}
+      </GlobalState>
     </>
   );
 }

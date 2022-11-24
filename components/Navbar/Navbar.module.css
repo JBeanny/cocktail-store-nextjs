@@ -17,9 +17,9 @@
   color: #6eccaf;
 }
 .container :nth-child(2) {
-  width: 20vw;
   display: flex;
   justify-content: space-evenly;
+  gap: 3em;
 }
 .container :nth-child(2) .link {
   font-size: 1.2em;

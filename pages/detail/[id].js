@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import classes from "./detail.module.css";
 import Image from "next/image";
 
-const Detail = () => {
-  const router = useRouter();
-  const id = router.query.id;
+const Detail = ({ id }) => {
   const [drink, setDrink] = useState({});
 
   const getDrink = async () => {
@@ -21,7 +18,7 @@ const Detail = () => {
 
   useEffect(() => {
     getDrink();
-  }, [router.query.id]);
+  }, []);
 
   if (drink.strDrinkThumb) {
     return (
@@ -44,5 +41,14 @@ const Detail = () => {
     );
   }
 };
+
+export async function getServerSideProps(context) {
+  const id = context && context.query.id;
+  return {
+    props: {
+      id,
+    },
+  };
+}
 
 export default Detail;
