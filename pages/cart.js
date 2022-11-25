@@ -56,10 +56,10 @@ function Cart(props) {
           );
         })}
       </div>
-      <div className="fixed flex justify-between items-center bottom-0 right-0 text-xl font-bold p-4 bg-white gap-24 rounded-md max-sm:rounded-none mb-4 mr-4 max-sm:mr-0 max-sm:mb-0 max-sm:w-screen">
+      <div className="fixed flex justify-between items-center bottom-0 right-0 text-xl font-bold p-4 bg-white gap-24 rounded-md max-sm:rounded-none mb-4 mr-4 max-sm:mr-0 max-sm:mb-0 max-sm:w-screen max-sm:text-sm">
         Total : ${total}
         <button
-          className="bg-orange p-2 rounded-md text-white"
+          className="bg-orange p-2 rounded-md text-white hover:bg-midBlack ease-in-out duration-300 max-sm:text-sm"
           onClick={() => {
             setModal(true);
             setTimeout(() => {

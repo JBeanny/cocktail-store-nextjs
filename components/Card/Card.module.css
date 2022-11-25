@@ -25,10 +25,12 @@
   display: flex;
   flex-direction: column;
   padding-left: 1em;
+  padding-top: 1em;
   background-color: #ffffff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  opacity: 0.7;
+  z-index: 10;
+  opacity: 0.8;
 }
 .container .cocktailContent .category {
   font-size: 1em;
@@ -63,6 +65,12 @@
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
+  transition: 0.3s all ease;
+}
+.container .action .btn:hover {
+  background-color: transparent;
+  border: 2px solid #181818;
+  color: #181818;
 }
 .container .action .counter {
   width: 50%;
@@ -87,4 +95,10 @@
   border-radius: 50%;
   background-color: #eeeeee;
   color: #ef9a53;
+  transition: 0.3s all ease;
+}
+.container .action .counter .actionBtn:hover {
+  background-color: transparent;
+  border: 1px solid #181818;
+  color: #181818;
 }/*# sourceMappingURL=Card.module.css.map */
