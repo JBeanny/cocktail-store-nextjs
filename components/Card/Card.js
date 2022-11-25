@@ -8,6 +8,7 @@ import { useContext } from "react";
 const Card = (props) => {
   const { id, src, category, name } = props;
   const { addToCart, removeFromCart, cart } = useContext(CartContext);
+  const price = id.split("")[4] != 0 ? id.split("")[4] : id.split("")[3];
 
   return (
     <div className={classes.container}>
@@ -27,6 +28,7 @@ const Card = (props) => {
       <div className={classes.cocktailContent}>
         <div className={classes.name}>{name}</div>
         <div className={classes.category}>{category}</div>
+        <div className={classes.price}>$ {price}</div>
       </div>
       <div className={classes.action}>
         <div className={classes.btn}>

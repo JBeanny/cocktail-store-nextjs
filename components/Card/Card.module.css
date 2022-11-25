@@ -35,6 +35,11 @@
   color: #181818;
   font-weight: bold;
 }
+.container .cocktailContent .price {
+  font-size: 1em;
+  color: #ff6464;
+  font-weight: bold;
+}
 .container .cocktailContent .name {
   font-size: 1.3em;
   color: #181818;

@@ -12,7 +12,7 @@ const nextConfig = {
       },
     ],
     //or
-    // domains: ["www.thecocktaildb.com"],
+    domains: ["images.unsplash.com", "media.wired.com"],
   },
 };
 

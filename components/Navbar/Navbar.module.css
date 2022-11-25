@@ -24,6 +24,15 @@
 .container :nth-child(2) .link {
   font-size: 1.2em;
   color: #eeeeee;
+  transition: 0.3s all ease;
+}
+.container :nth-child(2) .link:hover {
+  text-decoration: underline;
+}
+.container :nth-child(2) .activeLink {
+  font-size: 1.2em;
+  color: #eeeeee;
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
@@ -34,13 +43,15 @@
     scale: 0.8;
   }
   .container :nth-child(2) {
-    width: 50vw;
-    display: flex;
-    justify-content: space-evenly;
+    gap: 1em;
   }
   .container :nth-child(2) .link {
     font-size: 1em;
     color: #eeeeee;
+    padding-right: 0.5em;
+  }
+  .container :nth-child(2) .activeLink {
+    font-size: 1em;
     padding-right: 0.5em;
   }
 }/*# sourceMappingURL=Navbar.module.css.map */
