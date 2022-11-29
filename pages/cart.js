@@ -10,7 +10,7 @@ function Cart(props) {
 
   if (context.cart.length <= 0) {
     return (
-      <h1 class="text-center absolute top-1/2 left-1/2 -translate-x-1/2 gap-12 flex flex-col text-5xl font-bold max-sm:text-2xl">
+      <h1 className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 gap-12 flex flex-col text-5xl font-bold max-sm:text-2xl">
         <div>&#9785;</div>
         No Item Is In The Cart
       </h1>

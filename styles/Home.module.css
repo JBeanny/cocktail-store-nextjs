@@ -1,10 +1,15 @@
 .title {
-  text-align: center;
-  color: #383838;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: start;
+  color: #1e1e1e;
   opacity: 0.8;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin-top: 1em;
   font-size: 2em;
+  /* background-color: #ef9a53; */
+  border-radius: 10px;
+  padding-left: 2.5em;
 }
 
 .container {
@@ -15,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 5em;
+  margin-top: 1em;
 }
 .loading {
   height: 100vh;
