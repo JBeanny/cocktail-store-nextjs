@@ -2,9 +2,11 @@ import React, { useContext, useState } from "react";
 import CartContext from "../Context/CartContext";
 import Image from "next/image";
 import Modal from "../components/Modal/Modal";
+import { useRouter } from "next/router";
 
 function Cart(props) {
   const [modal, setModal] = useState(false);
+  const router = useRouter();
   const context = useContext(CartContext);
   let total = 0;
 
@@ -61,6 +63,10 @@ function Cart(props) {
         <button
           className="bg-orange p-2 rounded-md text-white hover:bg-midBlack ease-in-out duration-300 max-sm:text-sm"
           onClick={() => {
+            if (!localStorage.getItem("token")) {
+              router.push("/sign-up");
+              return;
+            }
             setModal(true);
             setTimeout(() => {
               setModal(false);

@@ -6,7 +6,12 @@ import GlobalState from "../Context/GlobalState";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const showHeader = router.pathname === "/404" ? false : true;
+  const showHeader =
+    router.pathname === "/404" ||
+    router.pathname === "/sign-up" ||
+    router.pathname === "/login"
+      ? false
+      : true;
 
   return (
     <>

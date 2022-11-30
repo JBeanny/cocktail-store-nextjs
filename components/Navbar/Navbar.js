@@ -4,6 +4,7 @@ import classes from "./Navbar.module.css";
 import Image from "next/image";
 import CartContext from "../../Context/CartContext";
 import { useRouter } from "next/router";
+import { BiLogIn } from "react-icons/bi";
 
 const Navbar = () => {
   const context = useContext(CartContext);
@@ -55,8 +56,11 @@ const Navbar = () => {
         >
           Contact
         </Link>
+        <Link href="/sign-up" className="text-2xl text-white">
+          <BiLogIn />
+        </Link>
       </div>
-      <h5 className="absolute right-52 max-sm:right-36 max-sm:-z-10 top-4 max-sm:top-4 bg-lightred text-white px-2 max-sm:px-2 max-sm:py-1/2 rounded-full cursor-pointer">
+      <h5 className="absolute right-72 max-sm:right-36 max-sm:-z-10 top-4 max-sm:top-4 bg-lightred text-white px-2 max-sm:px-2 max-sm:py-1/2 rounded-full cursor-pointer">
         <Link href="/cart">{itemInCart}</Link>
       </h5>
     </div>
